@@ -1,0 +1,205 @@
+/* The actual timeline (the vertical ruler) */
+.main-timeline-5 {
+    position: relative;
+    max-width: 100%;
+    margin: 0  auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .main-timeline-5::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .timeline-5 {
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+  }
+  
+  /* The circles on the timeline */
+  .timeline-5::after {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    right: 1px;
+    background-color: #fff;
+    top: 18px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the right */
+  .right-5 {
+    padding: 0px 0px 20px 40px;
+    left: auto;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right-5::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #fff;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #fff transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right-5::after {
+    left: -10px;
+  }
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-5 {
+    position: relative;
+    max-width: 100%;
+    margin: 0  auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .main-timeline-5::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .timeline-5 {
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+  }
+  
+  /* The circles on the timeline */
+  .timeline-5::after {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    right: 1px;
+    background-color: #fff;
+    top: 18px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the right */
+  .right-5 {
+    padding: 0px 0px 20px 40px;
+    left: auto;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right-5::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #fff;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #fff transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right-5::after {
+    left: -10px;
+  }
+
+  .testimonial .icon{
+    display: inline-block;
+    font-size: 80px;
+    color: #bd986b;
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+
+.testimonial{
+  background: #fff;
+  text-align: center;
+  /* padding: 30px 30px 50px; */
+  padding: 15px 15px 20px;;
+  /* margin: 0 15px 100px; */
+  position: relative;
+}
+/* .testimonial:before,
+.testimonial:after{
+  content: "";
+  border-top: 40px solid #fff;
+  border-right: 125px solid transparent;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+.testimonial:after{
+  border-right: none;
+  border-left: 125px solid transparent;
+  left: auto;
+  right: 0;
+} */
+.testimonial .icon{
+  display: inline-block;
+  font-size: 35px;
+  color: #13a5b6;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+.testimonial .description{
+  font-size: 15px;
+  color: #777;
+  text-align: left;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+.testimonial .testimonial-content{
+  width: 100%;
+  /* position: absolute; */
+  left: 0;
+}
+.testimonial .pic{
+  display: inline-block;
+  /* border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px #13a5b6;
+  overflow: hidden;
+  z-index: 1; */
+  position: relative;
+}
+.testimonial .pic img{
+  width: 80px;
+  height: 80px;
+}
+
+.testimonial .title{
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: capitalize;
+  margin: 0 0 5px 0;
+}
+.testimonial .post{
+  display: block;
+  font-size: 14px;
+  color: #13a5b6;
+}
+
+@media only screen and (max-width: 650px) and (min-width: 400px){
+    .testimonial:before{ border-right: 325px solid transparent; }
+    .testimonial:after{ border-left: 325px solid transparent; }
+}

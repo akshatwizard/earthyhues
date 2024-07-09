@@ -1,0 +1,58 @@
+/*.main-slider-one__carousel.owl-carousel.owl-loaded {
+    display: table;
+}*/
+
+@font-face {
+    font-family: bernadette-rough;
+    src: url(../bernadette-rough/bernadette_rough.ttf) format('opentype');
+}
+.main-slider-three__image .main-slider-one__carousel .active .main-slider-one__image {
+    transform: unset;
+}
+.tour-type-two.home_page{
+    padding: 0px 0 0;
+}
+.main-footer__logo-box{
+    /* padding: 10px 0 18px 0; */
+    padding: 12px 0 18px 64px;
+}
+
+.main-heading-title:after {
+    content: " ";
+    /* background-image: url(../images/diamond.png); */
+    position: absolute;
+    /* width: 90px; */
+    width: 200px;
+    height: 18px;
+    display: inline-block;
+    /* top: 46px; */
+    top: 35px;
+    left: 0;
+    /*right: 0;*/
+    margin: 0 auto;
+    border-bottom: 3px solid #13a5b6;
+}
+.font-bernadette-rough {
+    font-family: bernadette-rough!important;
+    color: #13a5b6;
+}
+.font-size{
+    font-size: 55px;
+}
+
+.main-slider-three__content {
+    width: 30%!important;
+  }
+  
+/* @media only screen and (max-width: 600px) {
+    .main-slider-three__content {
+      width: 100%!important;
+    }
+  } */
+
+
+/*Aman Css*/
+.borleft.banner-form__control::after{
+    display: none;
+}
+

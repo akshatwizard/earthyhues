@@ -1,0 +1,14 @@
+.form-group{
+    margin-top: 10px;
+}   
+
+@media (max-width: 768px) {
+    .ReactModal__Content {
+      width: 95% !important;
+    }
+  }
+@media (max-width: 480px) {
+    .ReactModal__Content {
+      width: 95% !important;
+    }
+  }
