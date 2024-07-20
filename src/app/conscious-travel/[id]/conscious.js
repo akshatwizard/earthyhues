@@ -56,7 +56,7 @@ const ConsciousDetail = ({ dest }) => {
         </div>
       </section>
       {loading ? <Loading /> :
-        <section className="mt-5">
+        <section className="mt-3">
           <div className="container">
             <div className="row">
               <div className="col-xl-12 col-lg-12 text-justify travel_con_de">

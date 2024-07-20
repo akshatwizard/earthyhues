@@ -19,6 +19,7 @@
     "react-modal": "^3.16.1",
     "react-multi-carousel": "^2.8.5",
     "react-toastify": "^10.0.5",
+    "resend": "^3.4.0",
     "typewriter-effect": "^2.21.0"
   }
 }

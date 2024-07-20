@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import Link from 'next/link';
+import CardLoader from '../CardLoader/CardLoader';
 
 const TripData = () => {
     const [data, setData] = useState([])
@@ -10,7 +11,7 @@ const TripData = () => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('https://www.banarasialoopapad.in/api-upcoming-trip-home')
-                setData(response.data)
+                setData(response?.data)
             } catch (error) {
                 console.error('Error fetching Testimonial:', error)
             }
@@ -19,11 +20,13 @@ const TripData = () => {
         fetchData()
     }, [])
 
+    // console.log(data[0].locations);
+
     return (
         <div className="my-5">
             <div className="container">
                 <div className="sec-title text-center">
-                    <p className="sec-title__tagline pt-5">Upcoming Trips</p>
+                    <p className="sec-title__tagline pt-5">Best Destinations Across Globe</p>
                     <h2 className="sec-title__title">
                         Upcoming Adventure Awaits
                     </h2>
@@ -31,54 +34,39 @@ const TripData = () => {
             </div>
             <section className="tour-type-two home_page">
                 <div className="container">
+                    {   !data.length ?  
+                    <section className='row justify-content-center'>
+                        <CardLoader />
+                        <CardLoader />
+                        <CardLoader />
+                    </section>
+                    :
                     <div className="row justify-content-md-center">
                         {data.map((item) => (
-                            <div className="col-lg-4 col-md-6 col-sm-12 wow fadeInUp mb-5" data-wow-delay="100ms" key={item.upcomingtrip_id}>
-                                <Link href={`packages/${item.upcomingtrip_url}`}>
-                                    <div className="tour-type-two__box mobuptrip">
-                                        <div className="tour-type-two__box__flipper">
-                                            <div className="tour-type-two__box__front">
-                                                <div className="tour-type-two__box__front__image">
-                                                    <img
-                                                        src={item.upcomingtrip_image}
-                                                        alt={item.upcomingtrip_name}
-                                                        style={{ aspectRatio: '3/2' }}
-                                                    />
-                                                </div>
-                                                <div className="tour-type-two__box__front__content py-5">
-                                                    <h5 className="tour-type-two__box__front__title">
-                                                        {item.upcomingtrip_name}
-                                                    </h5>
-                                                    <p className="tour-type-two__box__front__text" dangerouslySetInnerHTML={{ __html: item.dates_of_travel }}>
+                            <div className="col-lg-4 col-md-6 col-sm-12 wow fadeInUp mb-5" data-wow-delay="100ms" key={item.dnid}>
+                                <Link href={`destination/${item.url}`}>
+                                    <div className='toureCard'>
+                                        <div className='toureImageContainer'>
+                                            <img src={item.image} alt="" />
+                                        </div>
+                                        <div className='tourDataContainer'>
+                                            <h5 className="tour-type-two__box__front__title">
+                                                {item.destination_name}
+                                            </h5>
+                                            {Object.keys(item.locations).slice(0, 5).map((key, index) => (
+                                                <span className='post-category__btn trevlo-btn trevlo-btn--base locationBtn' key={index}>
+                                                    <span>{item.locations[key]}</span>
+                                                </span>
+                                            ))}
+                                            <p className="tour-type-two__box__front__text mt-3" dangerouslySetInnerHTML={{ __html: item.description }}>
 
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div className="tour-type-two__box__back">
-                                                <div className="tour-type-two__box__back__image">
-                                                    <img
-                                                        src={item.upcomingtrip_image}
-                                                        alt="trevlo"
-                                                    />
-                                                </div>
-                                                <div className="tour-type-two__box__back__content">
-                                                    <h5 className="tour-type-two__box__back__title">
-                                                        {item.upcomingtrip_name}
-                                                    </h5>
-                                                    <p className="tour-type-two__box__back__text">
-                                                        {item.upcomingtrip_duration}
-                                                    </p>
-                                                    <p className="tour-type-two__box__back__text" dangerouslySetInnerHTML={{ __html: item.cost_per_person_starting_from }}>
-
-                                                    </p>
-                                                </div>
-                                            </div>
+                                            </p>
                                         </div>
                                     </div>
                                 </Link>
                             </div>
                         ))}
-                    </div>
+                    </div>}
                 </div>
             </section>
         </div>

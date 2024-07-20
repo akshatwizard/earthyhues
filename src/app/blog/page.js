@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import Loading from '@/components/Loading/Loading';
 import Link from 'next/link';
+import NotFoundLoader from '@/components/NotFoundLoader/NotFoundLoader';
 
 function Blog() {
   const [data, setData] = useState([]);
@@ -47,6 +48,8 @@ function Blog() {
     setSelectedBlogId(blogId);
   };
 
+  // console.log(filteredData.length);
+  // console.log(filteredData);
 
   return (
     <div>
@@ -82,15 +85,18 @@ function Blog() {
                   // left: 23
                   marginBottom: "20px"
                 }}>
-                <span className="font-bernadette-rough display-4" style={{ fontSize: 51 }}>
+                <span className="font-bernadette-rough display-4">
                   Travel Blog
                 </span>
                 <div className='searchSection'>
-                  <input type="text" placeholder='Search.......' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style={{ fill: "#13a5b6" }}><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" /></svg>
+                  <input type="text" placeholder='Search.......' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+                  {searchQuery.length ? 
+                  <span className='clearText' onClick={()=>setSearchQuery("")}>x</span>:""}
                 </div>
               </h3>
               <div className="row">
+              {!filteredData.length ? "":
                 <div className="col-xl-4 col-lg-5">
                   <div className="sidebar-blog sidebar-blog--left">
                     <aside className="widget-area">
@@ -113,7 +119,7 @@ function Blog() {
                       >
                         <h4 className="sidebar-blog__title">Latest posts</h4>
                         <ul className="sidebar-blog__posts ">
-                          {data.map((item) => (
+                          {filteredData.map((item) => (
                             <li className="sidebar-blog__posts-item" key={item.blog_id}>
                               <div className="sidebar-blog__posts-image">
                                 <img
@@ -132,13 +138,12 @@ function Blog() {
                           ))}
                         </ul>
                       </div>
-                      <div
+                      {/* <div
                         className="sidebar-blog__single sidebar-blog__single--tags wow animated fadeInUp"
                         data-wow-delay="0.3s"
                         data-wow-duration="1500ms"
                       >
                         <h4 className="sidebar-blog__title">Tags</h4>
-                        {/* /.sidebar-blog__title */}
                         <div className="sidebar-blog__tags">
                           <a
 
@@ -165,14 +170,15 @@ function Blog() {
                             <span>Tourism</span>
                           </a>
                         </div>
-                      </div>
+                      </div> */}
                     </aside>
                   </div>
-                </div>
-
+                </div>}
+                {!filteredData.length ? <NotFoundLoader/>:
                 <div className="col-xl-8 col-lg-7">
                   {filteredData.map((item) => (
-                    <div id={`blog-${item.blog_id}`} className="sidebar-blog__single--search mb-5 blog_list mt-5" key={item.blog_id}>
+                    
+                    <div id={`blog-${item.blog_id}`} className="sidebar-blog__single--search mb-5 blog_list" key={item.blog_id}>
                       <Link href={`/blog/${item.blog_url}`} onClick={scrollToTop}>
                         <div className="blog-details">
                           <div className="blog-card-three ">
@@ -229,7 +235,7 @@ function Blog() {
                     </div>
                   ))}
                   {/* /.col-xl-8 col-lg-7 */}
-                </div>
+                </div>}
                 {/* /.row */}
               </div>
             </div>

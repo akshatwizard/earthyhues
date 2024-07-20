@@ -51,7 +51,7 @@ function Testimonial() {
                                 paddingLeft: '200',
                                 fontSize: "25px!important",
                             }}>
-                            <span className="font-bernadette-rough display-4" style={{ fontSize: 51 }}>
+                            <span className="font-bernadette-rough display-4">
                                 Testimonials
                             </span>
                         </h3>

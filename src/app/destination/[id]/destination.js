@@ -101,9 +101,9 @@ const Destinations = ({ dest }) => {
                                                     <img src={location.location_img_small} alt="assets/images/tours/tour-3-1.jpg" className="tour-listing__card-image" style={{ aspectRatio: '3/2' }} />
                                                     <div className="tour-listing__card-image-overlay" />
                                                 </a>
-                                                <a onClick={() => openModal(location)} className="tour-listing__card-wishlist">
+                                                {/* <a onClick={() => openModal(location)} className="tour-listing__card-wishlist">
                                                     <span className="icon-heart" />
-                                                </a>
+                                                </a> */}
                                                 <div className="tour-listing__card-content p-4">
                                                     <div className="tour-listing__card-camera-group">
 

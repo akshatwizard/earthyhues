@@ -1,3 +1,6 @@
+'use client'
+import axios from "axios"
+import { useEffect, useState } from "react"
 import Image from "next/image";
 import Banner from "@/components/Banner/Banner";
 import Upcomingtrip from "@/components/UpcomingTrips/Upcomingtrip";
@@ -5,12 +8,28 @@ import About from "@/components/About/About";
 import VideoHome from "@/components/VideoHome/VideoHome";
 import { scrollToTop } from "@/helper/ScrollToTop";
 import Link from "next/link";
+
 import Testmonial from "@/components/Testmonial/Testmonial";
 import HomeBlog from "@/components/HomeBlog/HomeBlog";
 import jQuery from "jquery";
 import SocialMedia from "@/components/SocialMedia/SocialMedia";
 
 export default function Home() {
+  const [noOfPackage, setNoOfPackage] = useState(0)
+
+    useEffect(() => {
+        async function packageCount() {
+            try {
+                const response = await axios.get('https://www.banarasialoopapad.in/apipackages')
+                setNoOfPackage(response?.data)
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        packageCount()
+    }, [])
+    // console.log(noOfPackage.length);
+  
   return (
     <div className="page-wrapper">
       <Banner />
@@ -32,21 +51,26 @@ export default function Home() {
           <div className="row">
             <div className="col-xl-3 wow fadeInUp" data-wow-delay="100ms">
               <Link href={`passion/${'beach-chill-698'}`} onClick={scrollToTop}>
-                <div className="tour-type__box">
-                  <div className="tour-type__box__icon">
-                    <span className="icon-windsurfing-2" />
+                <div className="tour-type__box hoverImg">
+                  <div className="tour-type__box__icon ">
+                    {/* <span className="icon-windsurfing-2" /> */}
+                    {/* <div className="tourIcon"></div> */}
+                    <img src="assets/images/icon/1.png" alt="" className="default"/>
+                    <img src="assets/images/icon/2.png" alt="" className="hover"/>
                   </div>
-                  <h3 className="tour-type__box__title">Beach Chill</h3>
+                  <h3 className="tour-type__box__title">Family Vacation</h3>
                 </div>
               </Link>
             </div>
             <div className="col-xl-3 wow fadeInUp" data-wow-delay="150ms">
               <Link href={`passion/${'water-sports-705'}`} onClick={scrollToTop}>
-                <div className="tour-type__box">
+                <div className="tour-type__box hoverImg">
                   <div className="tour-type__box__icon">
-                    <span className="icon-paragliding-5" />
+                    {/* <span className="icon-paragliding-5" /> */}
+                    <img src="assets/images/icon/8.png" alt="" className="default"/>
+                    <img src="assets/images/icon/7.png" alt="" className="hover"/>
                   </div>
-                  <h3 className="tour-type__box__title">Water Sport</h3>
+                  <h3 className="tour-type__box__title">Corporate</h3>
                 </div>
               </Link>
             </div>
@@ -56,18 +80,20 @@ export default function Home() {
                   <div className="tour-type__box__icon">
                     <span className="icon-hiking-4" />
                   </div>
-                  <h3 className="tour-type__box__title">Little Wanderer</h3>
+                  <h3 className="tour-type__box__title">Adventure Tours</h3>
                 </div>
               </Link>
             </div>
             <div className="col-xl-3 wow fadeInUp" data-wow-delay="250ms">
               <Link href={`passion/${'birding-699'}`} onClick={scrollToTop}>
-                <div className="tour-type__box">
+                <div className="tour-type__box hoverImg">
                   <div className="tour-type__box__icon">
                     {/* <span className="icon-hang-gliding-3" /> */}
-                    <span className="icon-wildlife" />
+                    {/* <span className="icon-wildlife" /> */}
+                    <img src="assets/images/icon/4.png" alt="" className="default"/>
+                    <img src="assets/images/icon/9.png" alt="" className="hover"/>
                   </div>
-                  <h3 className="tour-type__box__title">Birding</h3>
+                  <h3 className="tour-type__box__title">Sustainable</h3>
                 </div>
               </Link>
             </div>
@@ -75,7 +101,7 @@ export default function Home() {
               <Link href={`passion/${'wildlife-16'}`} onClick={scrollToTop}>
                 <div className="tour-type__box">
                   <div className="tour-type__box__icon">
-                    <span className="icon-deer-silhouette-1" />
+                  <span className="icon-wildlife" />
                   </div>
                   <h3 className="tour-type__box__title">Wildlife</h3>
                 </div>
@@ -119,7 +145,7 @@ export default function Home() {
                   <span className="count-text" data-stop="1K+" data-speed={1500} />
                   1 K+
                 </h3>
-                <p className="counter-three__box__title">Happy Traveller</p>
+                <p className="counter-three__box__title">No. of travellers</p>
               </div>
             </div>
             {/* /.col-xl-2 col-md-4 */}
@@ -131,9 +157,9 @@ export default function Home() {
                 {/* /.counter-box__icon */}
                 <h3 className="counter-three__box__number count-box">
                   <span className="count-text" data-stop="50+" data-speed={1500} />
-                  50+
+                  {noOfPackage?.length}+
                 </h3>
-                <p className="counter-three__box__title">Eco-friendly</p>
+                <p className="counter-three__box__title">No. of Packages</p>
               </div>
             </div>
             {/* /.col-xl-2 col-md-4 */}
@@ -144,10 +170,10 @@ export default function Home() {
                 </div>
                 {/* /.counter-box__icon */}
                 <h3 className="counter-three__box__number count-box">
-                  <span className="count-text" data-stop="4.9" data-speed={1500} />
-                  4.9
+                  <span className="count-text" data-stop="98%" data-speed={1500} />
+                  98%
                 </h3>
-                <p className="counter-three__box__title">GMB Rating</p>
+                <p className="counter-three__box__title">Google Ranking</p>
               </div>
             </div>
             {/* /.col-xl-2 col-md-4 */}

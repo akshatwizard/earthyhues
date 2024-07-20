@@ -72,7 +72,7 @@ function Conscious() {
                       fontSize: "25px!important",
                       // left: 23
                     }}>
-                    <span className="font-bernadette-rough display-4" style={{ fontSize: 51 }}>
+                    <span className="font-bernadette-rough display-4">
                       Conscious Travel
                     </span>
                   </h3>

@@ -5,72 +5,58 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const FeedBack = (location) => {
-  const [formData, setFormData] = useState(null);
+  const [formData, setFormData] = useState({});
+  const [newData, setNewData] = useState({
+    name: "",
+    travelKind: "",
+    noOfTravellers: "",
+    noOfDays: ""
+  })
 
-
+  function handleChange(event) {
+    const { name, value } = event.target
+    setNewData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }))
+  }
 
   useEffect(() => {
-    // Retrieve data from local storage
     const storedData = JSON.parse(localStorage.getItem('searchFormData'));
-
-    // Set the retrieved data in the component state
-    setFormData(storedData && storedData.length > 0 ? storedData[0] : null);
-  }, []); // Empty dependency array to run this effect only once when the component mounts
-
-  const formatDate = (dateString) => {
-    const options = { year: 'numeric', month: 'long' };
-    return new Date(dateString).toLocaleDateString('en-US', options);
-  };
+    if (storedData && storedData.data) {
+      setFormData(storedData.data);
+      // console.log(storedData.data);
+    }
+  }, []);
 
 
-  const handleSubmit = (e) => {
+
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Form data to be sent
     const formDataToSend = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      phone: e.target.phone.value,
-      feedbackLocation: e.target.feedbackLocation.value,
-      searchId: formData.search_id,
-      FeedBackFormFinalSubmit: "FeedBackFormFinalSubmit"
+      ...formData,
+      ...newData,
     };
 
-    e.target.reset();
-    // Send data using Axios
-    axios.post('https://www.banarasialoopapad.in/search-form-submit', formDataToSend)
-      .then((response) => {
-        console.log('Data sent successfully:', response.data);
-        // alert(JSON.stringify(response.data));
-        toast.success('Form Submitted', {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light"
-        });
-        // Optionally, you can store the response data in local storage
-        localStorage.setItem('responseFormData', JSON.stringify(response.data));
+    try {
+      // const response = await axios.post('/api/fulldata', { newData, formData });
+      await axios.post('https://www.banarasialoopapad.in/search-form-submit', formDataToSend);
 
-        // Optionally, you can redirect to another page after storing the data
-        // window.location.href = '/Feedback'; 
-      })
-      .catch((error) => {
-        console.error('Error sending data:', error);
-        toast.error('Error submitting form. Please try again.', {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+      setNewData({
+        name: "",
+        travelKind: "",
+        noOfTravellers: "",
+        noOfDays: ""
       });
+
+      toast.success('Feedback submitted successfully!');
+      // console.log(response.data.data);
+    } catch (error) {
+      console.error('Error submitting feedback:', error);
+      toast.error('Failed to submit feedback.');
+    }
   };
 
   return (
@@ -78,54 +64,34 @@ const FeedBack = (location) => {
       <>
         <section className="page-header">
           <div className="page-header__bg" />
-          {/* /.page-header__bg */}
           <div className="container">
-            
+
             <div className="page-header__breadcrumb-box">
-              {/* <ul className="trevlo-breadcrumb">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>Contact</li>
-        </ul> */}
-              {/* /.trevlo-breadcrumb */}
             </div>
-            {/* /.page-header__breadcrumb-box */}
           </div>
-          {/* /.container */}
         </section>
-        {/* /.page-header */}
       </>
 
       <section className="contact-page section-space-top">
         <div className="container">
-        <h3
-              className="offer-one__heading sec-title__heading text-left headingdest"
-              style={{
-                // marginTop: "-62px",
-                paddingLeft: '200',
-                fontSize: "25px!important",
-                marginBottom:"25px"
-              }}>
-              <span className="font-bernadette-rough display-4">
-                Give Feedback
-              </span>
-            </h3>
+          <h3
+            className="offer-one__heading sec-title__heading text-left headingdest"
+            style={{
+              paddingLeft: '200',
+              fontSize: "25px!important",
+              marginBottom: "25px"
+            }}>
+            <span className="font-bernadette-rough display-4">
+              Give Feedback
+            </span>
+          </h3>
           <div className="sec-title text-center">
             {formData ? (
               <div>
                 {/* Display the retrieved data */}
                 <h2>Thanks for showing interest in EarthyHues Adventure Travels</h2>
-                {/* <p><strong>Location:</strong> {formData.location}</p>
-                    <p><strong>Passion</strong>: {formData.passion}</p>
-                    <p><strong>Date</strong>: {formatDate(formData.date)}</p>
-                    <p><strong>No. of Travelers</strong>: {formData.num_of_travellers}</p> */}
                 <div className="container my-5">
                   <div className="row">
-                    {/* First row for the image */}
-                    {/* <div className="col-12 col-md-6">
-          <img src='assets/earthyhues-image/praslin-3555706 (1)_0.jpg' alt="Image" className="img-fluid" />
-        </div> */}
 
                     {/* Second row for the data */}
                     <div className="col-12 col-md-12 blogdetail ">
@@ -139,23 +105,23 @@ const FeedBack = (location) => {
                         </div>
                         <div className="col-12 col-sm-3 ">
                           <div className='shadowBox' style={{ padding: '10px' }}>
-                            <i className="icon-hiking" style={{ fontSize: '30px' }} />
-                            <h4>Passion</h4>
-                            <p style={{ marginBottom: '0px' }}> {formData.passion}</p>
+                            <i className="icon-calendar-5" style={{ fontSize: '26px' }} />
+                            <h4>Date</h4>
+                            <p style={{ marginBottom: '0px' }}>{formData.date}</p>
                           </div>
                         </div>
                         <div className="col-12 col-sm-3 ">
                           <div className='shadowBox' style={{ padding: '10px' }}>
-                            <i className="icon-calendar-5" style={{ fontSize: '26px' }} />
-                            <h4>Date</h4>
-                            <p style={{ marginBottom: '0px' }}>{formatDate(formData.date)}</p>
+                            <i className="icon-hiking" style={{ fontSize: '30px' }} />
+                            <h4>Email</h4>
+                            <p style={{ marginBottom: '0px' }}> {formData.email}</p>
                           </div>
                         </div>
                         <div className="col-12 col-sm-3 ">
                           <div className='shadowBox' style={{ padding: '10px' }}>
                             <i className="icon-satisfied" style={{ fontSize: '30px' }} />
-                            <h4>No. of Travelers</h4>
-                            <p style={{ marginBottom: '0px' }}> {formData.num_of_travellers}</p>
+                            <h4>Contacl No.</h4>
+                            <p style={{ marginBottom: '0px' }}> {formData.contactNo}</p>
                           </div>
                         </div>
                       </div>
@@ -168,7 +134,6 @@ const FeedBack = (location) => {
               <p>No search form data found.</p>
             )}
 
-            {/* <h3 className="sec-title__title">Please Provide further details,<br/> so that we can get in touch with you</h3> */}
             <h3>Please Provide further details,<br /> so that we can get in touch with you</h3>
             {/* /.sec-title__title */}
           </div>
@@ -183,11 +148,13 @@ const FeedBack = (location) => {
             >
               <div className="form-one__group">
                 <input
+                value={newData.name}
                   type="text"
                   name="name"
                   id="form-one-name-input"
                   placeholder="Your Name"
                   className="form-one__input"
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -201,11 +168,13 @@ const FeedBack = (location) => {
             >
               <div className="form-one__group">
                 <input
-                  type="email"
-                  name="email"
+                value={newData.travelKind}
+                  type="text"
+                  name="travelKind"
                   id="form-one-email-input"
-                  placeholder="Email Address"
+                  placeholder="Kind of Travel"
                   className="form-one__input"
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -219,11 +188,13 @@ const FeedBack = (location) => {
             >
               <div className="form-one__group">
                 <input
-                  type="tel"
-                  name="phone"
+                value={newData.noOfTravellers}
+                  type="number"
+                  name="noOfTravellers"
                   id="form-one-phone-input"
-                  placeholder="Phone"
+                  placeholder="No Of Travellers"
                   className="form-one__input"
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -237,10 +208,12 @@ const FeedBack = (location) => {
             >
               <div className="form-one__group">
                 <input
-                  type="text"
-                  name="feedbackLocation"
+                value={newData.noOfDays}
+                  type="number"
+                  name="noOfDays"
                   id="form-one-subject-input"
-                  placeholder="Location"
+                  placeholder="No Of Days"
+                  onChange={handleChange}
                   required
                   className="form-one__input" />
 

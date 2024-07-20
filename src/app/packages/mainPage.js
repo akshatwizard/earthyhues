@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import Loading from '@/components/Loading/Loading';
+import NotFoundLoader from '@/components/NotFoundLoader/NotFoundLoader';
 
 function Packages() {
     const [data, setData] = useState([]);
@@ -13,11 +14,11 @@ function Packages() {
     const [destinationList, setDestinationList] = useState({})
     const [filteredData, setFilteredData] = useState([]);
 
-    
+
     const handleChange = (event) => {
         setSelectedPassion(event.target.value);
     };
-    function handleDest(event){
+    function handleDest(event) {
         setSelectedDestination(event.target.value)
     }
     // console.log(data[0]);
@@ -29,7 +30,7 @@ function Packages() {
                 const menu = await axios.get('https://www.banarasialoopapad.in/home-menu')
                 setPassionList(menu.data[0]?.passion || []);
                 setDestinationList(menu.data[0]?.destination || [])
-                
+
             } catch (error) {
                 console.error('Error fetching Package:', error);
             } finally {
@@ -42,15 +43,15 @@ function Packages() {
     useEffect(() => {
         const filterData = () => {
             let filtered = [...data];
-            
+
             if (selectedPassion !== '') {
                 filtered = filtered.filter(item => Object.keys(item.passions).includes(selectedPassion));
             }
-            
+
             if (selectedDestination !== '') {
                 filtered = filtered.filter(item => Object.keys(item.destinations).includes(selectedDestination));
             }
-            
+
             setFilteredData(filtered);
             // console.log(filtered);
         };
@@ -89,7 +90,7 @@ function Packages() {
                                     Packages of Earthy Hues
                                 </span>
                                 <div className='filterSection'>
-
+                                    <p>Filter</p>
                                     <select value={selectedPassion} onChange={handleChange}>
                                         <option value="">Passions...</option>
                                         {
@@ -102,7 +103,7 @@ function Packages() {
                                             })
                                         }
                                     </select>
-                                    <p>Short by</p>
+
                                     <select value={selectedDestination} onChange={handleDest}>
                                         <option value="">Destinations...</option>
                                         {
@@ -117,6 +118,8 @@ function Packages() {
                                     </select>
                                 </div>
                             </h3>
+                            {!filteredData.length ? <NotFoundLoader/>:
+                            <>
                             {filteredData.map((packageData) => (
                                 <div className="col-lg-4" key={packageData.package_id}>
                                     <Link href={`/packages/${packageData.package_url}`} onClick={scrollToTop}>
@@ -136,7 +139,7 @@ function Packages() {
                                         </div>
                                     </Link>
                                 </div>
-                            ))}
+                            ))}</>}
                         </div>
                     </div>
                 </section>}

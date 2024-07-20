@@ -44,7 +44,7 @@ const PackageDetail = ({ dest }) => {
                 </div>
             </section>
             {loading ? <Loading /> :
-                <section className="mt-5">
+                <section>
                     <div className="container">
                         {/* {data.map((item) => ( */}
                         <div className="tour-listing-details__row row testdest">
@@ -56,7 +56,7 @@ const PackageDetail = ({ dest }) => {
                                         data-wow-delay="0.1s"
                                         data-wow-duration="1500ms"
                                     >
-                                        <h3 className=" h1Title tour-listing-details__title tour-listing-details__overview-title font-bernadette-rough display-4">
+                                        <h3 className="tour-listing-details__overview-title font-bernadette-rough display-4">
                                             {/* Spectacles of the Thar */}
                                             {data.package_title}
                                         </h3>
@@ -64,13 +64,13 @@ const PackageDetail = ({ dest }) => {
                                     <div className="col-xl-4 rightsidediv imgContainer">
                                         <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
                                             <div class="carousel-inner">
-                                                <div class="carousel-item active">
+                                                <div class="carousel-item active" data-bs-interval="2000">
                                                     <img src={data.package_img} class="d-block" alt="..." />
                                                 </div>
-                                                <div class="carousel-item">
+                                                <div class="carousel-item" data-bs-interval="2000">
                                                     <img src={data.gallery?.[0]?.large_image} class="d-block" alt="..." />
                                                 </div>
-                                                <div class="carousel-item">
+                                                <div class="carousel-item" data-bs-interval="2000">
                                                     <img src={data.gallery?.[1]?.large_image} class="d-block" alt="..." />
                                                 </div>
                                             </div>
@@ -84,7 +84,7 @@ const PackageDetail = ({ dest }) => {
                                             </button>
                                         </div>
                                     </div>
-                                    <h1 className='pageHeading animated fadeInUp'>{data.package_title}Travel Package by EarthyHues</h1>
+                                    <h1 className='pageHeading animated fadeInUp'>{data.package_title} Travel Package by EarthyHues</h1>
                                     <p
                                         className="tour-listing-details__overview-text wow animated fadeInUp"
                                         data-wow-delay="0.1s"
@@ -232,8 +232,8 @@ const PackageDetail = ({ dest }) => {
                                 <h3 className="tour-listing-details__title tour-listing-details__amenities-title">Gallery</h3>
                                 <div className="row">
                                     {data && data.gallery && data.gallery.map((items) => (
-                                        <div className="col-lg-2 col-ms-2">
-                                            <img src={items.small_image} alt={items.alt} className='w-100 h-100 ' />
+                                        <div className="col-lg-4 col-ms-4">
+                                            <img src={items.large_image} alt={items.alt} className='w-100 h-100 ' />
                                         </div>
                                     ))}
                                 </div>

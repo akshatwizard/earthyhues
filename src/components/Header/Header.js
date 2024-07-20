@@ -100,10 +100,12 @@ function Header() {
                                         <Link href="/testimonial">Testimonials</Link>
                                     </li>
                                     <li onClick={scrollToTop} className='navBarLi'>
-                                        <Link href="/conscious-travel">Conscious<br/>Travel</Link>
+                                        <Link href="/conscious-travel" className='linkHide'>Conscious<br/>Travel</Link>
+                                        <Link href="/conscious-travel" className='linkShow'>Conscious Travel</Link>
                                     </li>
                                     <li onClick={scrollToTop} className='navBarLi'>
-                                        <Link href="/blog" >Travel<br/>Blogs</Link>
+                                        <Link href="/blog"  className='linkHide'>Travel<br/>Blogs</Link>
+                                        <Link href="/blog"  className='linkShow'>Travel Blogs</Link>
                                     </li>
                                 </ul>
                             </nav>

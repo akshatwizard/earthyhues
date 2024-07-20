@@ -104,7 +104,7 @@ const Passion = ({ dest }) => {
                                             fontSize: "25px!important",
                                             marginBottom: "10px"
                                         }}>
-                                        <span className="font-bernadette-rough display-4" style={{ fontSize: 51 }}>
+                                        <span className="font-bernadette-rough display-4">
                                             {data.passion_name}
                                         </span>
                                         
@@ -119,15 +119,15 @@ const Passion = ({ dest }) => {
                                         </div>
                                             : <div className="imageCrouselContainer">
                                                 {/* <img src={imagesArray[0].image_file} alt="" /> */}
-                                                <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade"     data-bs-ride="carousel">
+                                                <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
                                                     <div class="carousel-inner">
-                                                        <div class="carousel-item active">
+                                                        <div class="carousel-item active" data-bs-interval="2000">
                                                             <img src={imagesArray[0].image_file} class="d-block" alt="..."/>
                                                         </div>
-                                                        <div class="carousel-item">
+                                                        <div class="carousel-item" data-bs-interval="2000">
                                                             <img src={imagesArray[1].image_file} class="d-block" alt="..."/>
                                                         </div>
-                                                        <div class="carousel-item">
+                                                        <div class="carousel-item" data-bs-interval="2000">
                                                             <img src={imagesArray[2].image_file} class="d-block" alt="..."/>
                                                         </div>
                                                     </div>

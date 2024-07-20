@@ -73,7 +73,7 @@ const Enquiry = () => {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         axios
             .post('https://www.banarasialoopapad.in/enquiry-submit', formData)
@@ -86,6 +86,8 @@ const Enquiry = () => {
             .catch((error) => {
                 toast.error('Failed to submit enquiry. Please try again later.');
             });
+            const response = await axios.post('/api/packageenquiry',formData)
+            console.log(response.data);
     };
 
     return (
