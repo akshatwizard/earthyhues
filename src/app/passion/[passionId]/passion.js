@@ -32,7 +32,7 @@ const Passion = ({ dest }) => {
     const [imagesArray, setImagesArray] = useState([])
     const isVideo = Array.isArray(data.passion_video_or_image_file)
 
-    // console.log(data.passion_video_or_image_file[0]);
+    // console.log(isVideo);
 
 
 
@@ -70,7 +70,7 @@ const Passion = ({ dest }) => {
             behavior: 'smooth'
         });
     };
-    // console.log(data);
+    // console.log(data?.passion_video_or_image_file);
     return (
         <>
             <section className="page-header">
@@ -107,45 +107,48 @@ const Passion = ({ dest }) => {
                                         <span className="font-bernadette-rough display-4">
                                             {data.passion_name}
                                         </span>
-                                        
-                                    </h3>
-                                    <section className='pageContent'>
-                                        
-                                        {!isVideo ? <div className='img-vdo-Container'>
-                                            <video autoPlay loop >
-                                                <source src={imagesArray} type="video/mp4" />
-                                                Your browser does not support the video tag.
-                                            </video>
-                                        </div>
-                                            : <div className="imageCrouselContainer">
-                                                {/* <img src={imagesArray[0].image_file} alt="" /> */}
-                                                <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                                                    <div class="carousel-inner">
-                                                        <div class="carousel-item active" data-bs-interval="2000">
-                                                            <img src={imagesArray[0].image_file} class="d-block" alt="..."/>
-                                                        </div>
-                                                        <div class="carousel-item" data-bs-interval="2000">
-                                                            <img src={imagesArray[1].image_file} class="d-block" alt="..."/>
-                                                        </div>
-                                                        <div class="carousel-item" data-bs-interval="2000">
-                                                            <img src={imagesArray[2].image_file} class="d-block" alt="..."/>
-                                                        </div>
-                                                    </div>
-                                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                        <span class="visually-hidden">Previous</span>
-                                                    </button>
-                                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                        <span class="visually-hidden">Next</span>
-                                                    </button>
-                                                </div>
-                                            </div>}
 
-                                        <p >
-                                            {details}
-                                        </p>
-                                    </section>
+                                    </h3>
+                                    {data?.passion_video_or_image_file ?
+                                        <section className='pageContent'>
+
+                                            {!isVideo ? <div className='img-vdo-Container'>
+                                                <video autoPlay loop >
+                                                    <source src={imagesArray} type="video/mp4" />
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            </div>
+                                                : <div className="imageCrouselContainer">
+                                                    {/* <img src={imagesArray[0].image_file} alt="" /> */}
+                                                    <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                                        <div class="carousel-inner">
+                                                            {
+                                                                data.passion_video_or_image_file.map((image, index) => (
+                                                                    <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`} data-bs-interval="1800">
+                                                                        <img src={image.image_file} alt={`Slide ${index + 1}`} />
+                                                                    </div>
+                                                                ))
+                                                            }
+                                                        </div>
+                                                        {data.passion_video_or_image_file.length > 1 &&
+                                                        <>
+                                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                <span class="visually-hidden">Previous</span>
+                                                            </button>
+                                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                <span class="visually-hidden">Next</span>
+                                                            </button>
+                                                        </>}
+
+                                                    </div>
+                                                </div>}
+
+                                            <p >
+                                                {details}
+                                            </p>
+                                        </section> : null}
 
                                 </div>}
 

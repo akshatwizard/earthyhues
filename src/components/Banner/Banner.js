@@ -72,7 +72,7 @@ const Banner = () => {
 
             <div className="main-slider-three__content marg">
                 <h5
-                    className="main-slider-three__sub-title wow fadeInUp"
+                    className="main-slider-three__sub-title wow fadeInUp font-bernadette-rough"
                     data-wow-delay="200ms"
                 >
                     Plan Your Dream Adventure

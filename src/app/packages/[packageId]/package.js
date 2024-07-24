@@ -28,7 +28,7 @@ const PackageDetail = ({ dest }) => {
         fetchData();
     }, [package_id]);
 
-    // console.log(data.gallery[0].small_image);
+    // console.log(data?.gallery?.length);
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -61,29 +61,29 @@ const PackageDetail = ({ dest }) => {
                                             {data.package_title}
                                         </h3>
                                     </div>
-                                    <div className="col-xl-4 rightsidediv imgContainer">
-                                        <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active" data-bs-interval="2000">
-                                                    <img src={data.package_img} class="d-block" alt="..." />
+                                    {data?.gallery?.length ?
+                                        <div className="col-xl-4 rightsidediv imgContainer">
+                                            <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    {
+                                                        data.gallery.map((image, index) => (
+                                                            <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`} data-bs-interval="1800">
+                                                                <img src={image.large_image} alt={`Slide ${index + 1}`} />
+                                                            </div>
+                                                        ))
+                                                    }
+
                                                 </div>
-                                                <div class="carousel-item" data-bs-interval="2000">
-                                                    <img src={data.gallery?.[0]?.large_image} class="d-block" alt="..." />
-                                                </div>
-                                                <div class="carousel-item" data-bs-interval="2000">
-                                                    <img src={data.gallery?.[1]?.large_image} class="d-block" alt="..." />
-                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
                                             </div>
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Previous</span>
-                                            </button>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Next</span>
-                                            </button>
-                                        </div>
-                                    </div>
+                                        </div> : null}
                                     <h1 className='pageHeading animated fadeInUp'>{data.package_title} Travel Package by EarthyHues</h1>
                                     <p
                                         className="tour-listing-details__overview-text wow animated fadeInUp"
