@@ -41,7 +41,7 @@ const Destinations = ({ dest }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`https://www.banarasialoopapad.in/destinations/${destination_id}`);
+                const response = await axios.get(`https://www.earthyhues.co.in/destinations/${destination_id}`);
                 // console.log(response.data);
                 setData(response.data);
             } catch (error) {

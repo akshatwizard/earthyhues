@@ -10,7 +10,7 @@ function page({params}) {
 
 
 export async function generateMetadata({ params }) {
-  const response = await axios.get(`https://www.banarasialoopapad.in/api-conscious-travel/${params.id}`);
+  const response = await axios.get(`https://www.earthyhues.co.in/api-conscious-travel/${params.id}`);
   const data = response.data
   return {
     title: `${data[0].title}`,

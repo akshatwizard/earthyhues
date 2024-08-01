@@ -20,7 +20,7 @@ export default function Home() {
     useEffect(() => {
         async function packageCount() {
             try {
-                const response = await axios.get('https://www.banarasialoopapad.in/apipackages')
+                const response = await axios.get('https://www.earthyhues.co.in/apipackages')
                 setNoOfPackage(response?.data)
             } catch (error) {
                 console.log(error);

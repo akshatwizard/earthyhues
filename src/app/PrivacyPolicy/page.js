@@ -40,7 +40,7 @@ const PrivacyPolicy = () => {
                                 data-wow-delay="0.1s" data-wow-duration="1500ms" >We want to assure you that we follow appropriate standards when it comes to protecting your privacy on our Sales Channel. This policy outlines the types of personal information collected on our website, how this data is used/processed and safeguarded as well as how users may exercise their rights with respect to personal information.
                             </p>  
                             <p className="tour-listing-details__overview-text wow animated fadeInUp"
-                                data-wow-delay="0.1s" data-wow-duration="1500ms">This Privacy Policy applies to, https://www.banarasialoopapad.in/ompany pages, communications and services ("Services"), including off-site Services, such as our email services, customer care and support services and the "Contact us"; "Apply with Company" and "Share on" plugins on our digital properties.
+                                data-wow-delay="0.1s" data-wow-duration="1500ms">This Privacy Policy applies to, https://www.earthyhues.co.in/ompany pages, communications and services ("Services"), including off-site Services, such as our email services, customer care and support services and the "Contact us"; "Apply with Company" and "Share on" plugins on our digital properties.
                             </p>  
                             <p className="tour-listing-details__overview-text wow animated fadeInUp"
                                 data-wow-delay="0.1s" data-wow-duration="1500ms">By using or accessing the Website or other Sales Channels, the user hereby agrees with the terms of this Privacy Policy and the contents herein.

@@ -22,7 +22,7 @@ function Blog() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://www.banarasialoopapad.in/api-travel-blog')
+        const response = await axios.get('https://www.earthyhues.co.in/api-travel-blog')
         setData(response.data)
       } catch (error) {
         console.error('Error fetching data:', error)

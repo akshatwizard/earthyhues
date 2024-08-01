@@ -12,7 +12,7 @@ function Conscious() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://www.banarasialoopapad.in/api-conscious-travel');
+        const response = await axios.get('https://www.earthyhues.co.in/api-conscious-travel');
         setData(response.data);
       } catch (error) {
         console.error("Error in Fetching Data", error);
@@ -134,9 +134,9 @@ function Conscious() {
                     <img src="./assets/img/HT feature1.jpg" alt="" className='w-100' />
                     <p className="sidebar-blog__posts-title pt-3">We are excited to be featured in Hindustan Times for our insights on sustainable travel practices. We feel honored to have the opportunity to share our perspectives on eco-conscious travel with a larger audience.@earthyhuestours we support sustainable travel that protects the environment supports local communities, preserves cultural heritage, and promotes personal enrichment.We can take some simple steps to reduce our impact and ensure that future generations can also enjoy the world's beauty and diversity.</p>
 
-                    <a href="https://www.banarasialoopapad.in/sites/all/themes/bootstrap/HT feature1.jpg" className="comment-box__btn trevlo-btn trevlo-btn--white-two"><span className='px-5'>View my Article
+                    <a href="https://www.earthyhues.co.in/sites/all/themes/bootstrap/HT feature1.jpg" className="comment-box__btn trevlo-btn trevlo-btn--white-two"><span className='px-5'>View my Article
                     </span></a>
-                    <a href="https://www.banarasialoopapad.in/sites/all/themes/bootstrap/HT feature.jpeg" className="comment-box__btn trevlo-btn trevlo-btn--white-two mt-3"><span className='px-5'>View whole Page</span></a>
+                    <a href="https://www.earthyhues.co.in/sites/all/themes/bootstrap/HT feature.jpeg" className="comment-box__btn trevlo-btn trevlo-btn--white-two mt-3"><span className='px-5'>View whole Page</span></a>
 
                   </div>
                 </aside>

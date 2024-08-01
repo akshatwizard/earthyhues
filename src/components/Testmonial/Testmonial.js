@@ -12,7 +12,7 @@ function Testmonial() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get('https://www.banarasialoopapad.in/home-page-feedback')
+        axios.get('https://www.earthyhues.co.in/home-page-feedback')
             .then((response) => {
                 if (Array.isArray(response.data) && response.data.length >= 1) {
                     setFeedback(response.data);

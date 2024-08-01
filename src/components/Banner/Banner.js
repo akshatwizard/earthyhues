@@ -37,7 +37,7 @@ const Banner = () => {
 
     useEffect(() => {
         axios
-            .get("https://www.banarasialoopapad.in/home-page-banner")
+            .get("https://www.earthyhues.co.in/home-page-banner")
             .then((response) => {
                 if (Array.isArray(response.data) && response.data.length >= 2) {
                     setData(response.data[1]);

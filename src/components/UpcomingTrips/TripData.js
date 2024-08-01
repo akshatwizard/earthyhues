@@ -10,7 +10,7 @@ const TripData = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://www.banarasialoopapad.in/api-upcoming-trip-home')
+                const response = await axios.get('https://www.earthyhues.co.in/api-upcoming-trip-home')
                 setData(response?.data)
             } catch (error) {
                 console.error('Error fetching Testimonial:', error)

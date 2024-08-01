@@ -11,7 +11,7 @@ function Testimonial() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://www.banarasialoopapad.in/api-testimonials')
+                const response = await axios.get('https://www.earthyhues.co.in/api-testimonials')
                 setData(response.data)
             } catch (error) {
                 console.error('Error fetching Testimonial:', error)

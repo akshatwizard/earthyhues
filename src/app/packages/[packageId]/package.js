@@ -16,7 +16,7 @@ const PackageDetail = ({ dest }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`https://www.banarasialoopapad.in/apipackages/${package_id}`);
+                const response = await axios.get(`https://www.earthyhues.co.in/apipackages/${package_id}`);
                 setData(response.data[0]);
                 // console.log(response.data);
             } catch (error) {

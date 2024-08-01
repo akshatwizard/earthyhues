@@ -25,9 +25,9 @@ function Packages() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://www.banarasialoopapad.in/apipackages');
+                const response = await axios.get('https://www.earthyhues.co.in/apipackages');
                 setData(response.data);
-                const menu = await axios.get('https://www.banarasialoopapad.in/home-menu')
+                const menu = await axios.get('https://www.earthyhues.co.in/home-menu')
                 setPassionList(menu.data[0]?.passion || []);
                 setDestinationList(menu.data[0]?.destination || [])
 

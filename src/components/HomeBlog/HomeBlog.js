@@ -6,7 +6,7 @@ const HomeBlog = () => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        fetch('https://www.banarasialoopapad.in/api-home-page-travel-blogs')
+        fetch('https://www.earthyhues.co.in/api-home-page-travel-blogs')
             .then(response => response.json())
             .then(data => setBlogs(data))
             .catch(error => console.error('Error fetching data:', error));
