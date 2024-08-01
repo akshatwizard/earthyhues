@@ -102,6 +102,7 @@ export default function RootLayout({ children }) {
         <script src="../assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="../assets/js/earthyhues.js"></script>
+{/*         
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-0XBFGE00CF"
           strategy="afterInteractive"
@@ -117,7 +118,7 @@ export default function RootLayout({ children }) {
               gtag('config', 'G-0XBFGE00CF');
             `,
           }}
-        />
+        /> */}
       </body>
     </html>
   );
