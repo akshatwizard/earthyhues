@@ -124,7 +124,7 @@ const Passion = ({ dest }) => {
                                                         <div class="carousel-inner">
                                                             {
                                                                 data.passion_video_or_image_file.map((image, index) => (
-                                                                    <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`} data-bs-interval="1800">
+                                                                    <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`} data-bs-interval="1500">
                                                                         <img src={image.image_file} alt={`Slide ${index + 1}`} />
                                                                     </div>
                                                                 ))
@@ -169,7 +169,7 @@ const Passion = ({ dest }) => {
                                                     <img
                                                         src={packageItem.package_img}
                                                         alt={packageItem.package_title}
-                                                        className="tour-listing__card-image" style={{ aspectRatio: '3/2' }} />
+                                                        className="tour-listing__card-image" style={{ aspectRatio: '3/2',objectFit:"cover",objectPosition:"top" }} />
                                                     <div className="tour-listing__card-image-overlay" />
                                                 </Link>
                                                 <Link

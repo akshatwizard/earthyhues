@@ -25,8 +25,8 @@ const FormHome = () => {
   async function handleSubmit(event){
     event.preventDefault()
     // const response = await axios.post('/api/formdata',formData)
-    const response = await axios.post('https://www.earthyhues.co.in/search-form-submit', formData)
-    console.log(response?.data);
+    const response  = await axios.post('https://www.earthyhues.co.in/search-form-submit', formData)
+    // console.log(response.data);
     localStorage.setItem('searchFormData', JSON.stringify(response.data));
     setFormData({
       location:"",

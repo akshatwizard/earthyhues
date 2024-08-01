@@ -18149,8 +18149,8 @@ select.selectpicker1 {
 
 @media (max-width:410px) {
   .imageCrouselContainer {
-    height: 240px !important;
-    width: 360px !important;
+    height: 220px !important;
+    width: 330px !important;
   }
 }
 
