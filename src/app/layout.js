@@ -3,6 +3,7 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import SocialMedia from "@/components/SocialMedia/SocialMedia";
 import jQuery from "jquery";
+import Script from "next/script";
 
 export const metadata = {
   title: "World's best Nature Travel Experience | Earthy Hues",
