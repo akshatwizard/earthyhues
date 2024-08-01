@@ -102,7 +102,7 @@ export default function RootLayout({ children }) {
         <script src="../assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="../assets/js/earthyhues.js"></script>
-        <script
+        {/* <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-0XBFGE00CF"
         ></script>
@@ -110,7 +110,7 @@ export default function RootLayout({ children }) {
           window.dataLayer = window.dataLayer || []; function gtag()
           {dataLayer.push(arguments)}
           gtag('js', new Date()); gtag('config', 'G-0XBFGE00CF');
-        </script>
+        </script> */}
       </body>
     </html>
   );
