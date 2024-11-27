@@ -4,6 +4,7 @@ import axios from 'axios';
 import Link from 'next/link';
 // import 'react-loading-skeleton/dist/skeleton.css'
 import Loading from '@/components/Loading/Loading';
+// import { consciousTravel } from '@/helper/feachPath';
 
 function Conscious() {
   const [data, setData] = useState({ general_content_top: '', general_content_bottom: '', testimonials_conscious: [] });
@@ -21,6 +22,7 @@ function Conscious() {
       }
     };
     fetchData();
+    // consciousTravel()
   }, []);
 
   // if (loading) {
