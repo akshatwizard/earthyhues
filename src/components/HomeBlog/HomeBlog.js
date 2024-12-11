@@ -48,7 +48,7 @@ const HomeBlog = () => {
                     <p
                       className="tour-listing__card-text text-small"
                       dangerouslySetInnerHTML={{
-                        __html: blog.travel_blog_details.substring(0, 150),
+                        __html: blog.travel_blog_details
                       }}
                     ></p>
 
