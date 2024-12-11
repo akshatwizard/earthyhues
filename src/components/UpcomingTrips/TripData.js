@@ -49,7 +49,7 @@ const TripData = () => {
             <div className="row justify-content-md-center">
               {data.map((item) => (
                 <div
-                  className="col-lg-4 col-md-6 col-sm-12 wow fadeInUp mb-5"
+                  className="col-lg-3 col-md-4 col-12 wow fadeInUp mb-5"
                   data-wow-delay="100ms"
                   key={item.dnid}
                 >
@@ -59,10 +59,10 @@ const TripData = () => {
                         <Image width={1000} height={1000} src={item.image} alt="" />
                       </div>
                       <div className="tourDataContainer">
-                        <h5 className="tour-type-two__box__front__title">
+                        <h5>
                           {item.destination_name}
                         </h5>
-                        {Object.keys(item.locations)
+                        {/* {Object.keys(item.locations)
                           .slice(0, 5)
                           .map((key, index) => (
                             <span
@@ -75,7 +75,7 @@ const TripData = () => {
                         <p
                           className="tour-type-two__box__front__text mt-3"
                           dangerouslySetInnerHTML={{ __html: item.description }}
-                        ></p>
+                        ></p> */}
                       </div>
                     </div>
                   </Link>

@@ -67,7 +67,7 @@ const Banner = () => {
   // console.log(data);
 
   return (
-    <section className="main-slider-three mobmarg">
+    <section className="container main-slider-three mobmarg">
       {/* <div className="container" style={{ position: "relative", zIndex: "-1" }}>
                 
             </div> */}
@@ -88,7 +88,7 @@ const Banner = () => {
         </h3>
       </div>
 
-      <div className="container">
+      <div className="">
         <FormHome />
       </div>
 
@@ -111,7 +111,7 @@ const Banner = () => {
               infinite={true}
               partialVisible={false}
               arrows={false}
-              containerClass="bdrRdr"
+              containerClass=""
             >
               {data.map((item) => (
                 <div className="main-slider-one__image" key={item.banner_id}>
