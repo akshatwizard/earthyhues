@@ -2747,7 +2747,7 @@ path {
   position: relative;
   border-radius: 20px;
   border: 0;
-  height: 20rem;
+  /* height: 20rem; */
 }
 
 .tour-listing-two .tour-listing__card-image-box {
@@ -6621,7 +6621,7 @@ body.megamenu-popup-active .mobile-nav__content {
   .page-header {
     padding: 70px 0;
   }
-  .main-header__left{
+  .main-header__left {
     align-items: start;
   }
 }
@@ -8637,7 +8637,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 
 @media (max-width: 480px) {
-  .main-header__inner{
+  .main-header__inner {
     padding-top: 15px;
   }
 
@@ -16400,13 +16400,13 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 
 .main-slider-one__image::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 66%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to bottom, rgb(0 0 0 / 100%), transparent);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 66%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 100%), transparent);
 }
 
 /* .carouselImg{
@@ -16755,7 +16755,7 @@ body.megamenu-popup-active .mobile-nav__content {
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap; */
-  left: 8%;
+  left: 1%;
 }
 
 @media (max-width: 767px) {
@@ -16922,7 +16922,7 @@ body.megamenu-popup-active .mobile-nav__content {
 
 @media (min-width: 1200px) and (max-width: 1360px) {
   .main-slider-three__customer__title {
-    margin-left: 12px;
+    /* margin-left: 12px; */
     font-size: 17px;
   }
 }
@@ -16935,7 +16935,7 @@ body.megamenu-popup-active .mobile-nav__content {
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .main-slider-three {
-    margin-left: 12px;
+    /* margin-left: 12px; */
     font-size: 17px;
   }
 }
@@ -18663,30 +18663,52 @@ input::placeholder {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out;
 }
 
 .toureCard .toureImageContainer {
   width: 100%;
   height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 10px 10px 0 0;
   }
 }
 
 .toureCard .tourDataContainer {
-  width: 100%;
-  height: 100%;
-  padding: 20px 10px 50px 10px;
-  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: max-content;
+  padding: 4px 20px;
+  background-color: #00000047;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
 
-  p {
-    font-weight: normal;
+  h5 {
+    color: white;
+    margin: 0;
+    font-size: 19px;
+  }
+  span {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    position: absolute;
+    bottom: 28px;
+    display: block;
+    width: max-content;
+    left: 8px;
   }
 }
 
@@ -18722,6 +18744,35 @@ input::placeholder {
           border-radius: 10px;
         }
       }
+    }
+  }
+}
+
+.b-container {
+  width: 100%;
+  height: 30rem;
+  position: relative;
+  /* border: 1px solid #13a5b6; */
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+  .b-wraper {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 5px;
+
+    img {
+      border-radius: 10px;
+    }
+    h3 {
+      margin-top: 15px;
+      line-height: 1.2;
+    }
+    p {
+      line-height: 1.4;
     }
   }
 }

@@ -61,7 +61,7 @@ function Testimonial() {
               </h3>
               {data.map((index) => (
                 <div className="col-lg-4" key={index.testimonials_id}>
-                  <div>
+                  <div style={{height:"100%"}}>
                     <div className="card h-100" style={{ border: "none" }}>
                       <div className="card-height h-100">
                         <div className="testcontent">
