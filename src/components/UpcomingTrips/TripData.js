@@ -56,12 +56,20 @@ const TripData = () => {
                   <Link href={`destination/${item.url}`}>
                     <div className="toureCard">
                       <div className="toureImageContainer">
-                        <Image width={1000} height={1000} src={item.image} alt="" />
+                        <Image
+                          width={1000}
+                          height={1000}
+                          src={item.image}
+                          alt=""
+                        />
                       </div>
                       <div className="tourDataContainer">
-                        <h5>
-                          {item.destination_name}
-                        </h5>
+                        <span>
+                          {Object.keys(item.locations)
+                            .slice(0, 1)
+                            .map((key, index) => item.locations[key])}
+                        </span>
+                        <h5>{item.destination_name}</h5>
                         {/* {Object.keys(item.locations)
                           .slice(0, 5)
                           .map((key, index) => (
