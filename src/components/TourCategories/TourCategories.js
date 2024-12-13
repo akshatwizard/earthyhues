@@ -1,6 +1,7 @@
 import React from "react";
 import { scrollToTop } from "@/helper/ScrollToTop";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function TourCategories() {
   return (
@@ -18,91 +19,133 @@ export default function TourCategories() {
           <h2 className="sec-title__title">Choose Tour Types</h2>
         </div>
         <div className="row">
+
           <div className="col-xl-3 wow fadeInUp" data-wow-delay="100ms">
-            <Link href={`passion/${"beach-chill-698"}`} onClick={scrollToTop}>
+            <Link href={`passion/${"wildlife-16"}`} onClick={scrollToTop}>
               <div className="tour-type__box hoverImg">
                 <div className="tour-type__box__icon ">
                   {/* <span className="icon-windsurfing-2" /> */}
                   {/* <div className="tourIcon"></div> */}
-                  <img
-                    src="assets/images/icon/1.png"
+                  <Image
+                    width={65}
+                    height={65}
+                    src="/assets/img/wildlife.png"
                     alt=""
                     className="default"
                   />
-                  <img
-                    src="assets/images/icon/2.png"
+                  <Image
+                   width={65}
+                   height={65}
+                    src="/assets/img/wildlife-white.png"
                     alt=""
                     className="hover"
                   />
-                </div>
-                <h3 className="tour-type__box__title">Family Vacation</h3>
-              </div>
-            </Link>
-          </div>
-          <div className="col-xl-3 wow fadeInUp" data-wow-delay="150ms">
-            <Link href={`passion/${"water-sports-705"}`} onClick={scrollToTop}>
-              <div className="tour-type__box hoverImg">
-                <div className="tour-type__box__icon">
-                  {/* <span className="icon-paragliding-5" /> */}
-                  <img
-                    src="assets/images/icon/8.png"
-                    alt=""
-                    className="default"
-                  />
-                  <img
-                    src="assets/images/icon/7.png"
-                    alt=""
-                    className="hover"
-                  />
-                </div>
-                <h3 className="tour-type__box__title">Corporate</h3>
-              </div>
-            </Link>
-          </div>
-          <div className="col-xl-3 wow fadeInUp" data-wow-delay="200ms">
-            <Link
-              href={`passion/${"little-wanderer-704"}`}
-              onClick={scrollToTop}
-            >
-              <div className="tour-type__box">
-                <div className="tour-type__box__icon">
-                  <span className="icon-hiking-4" />
-                </div>
-                <h3 className="tour-type__box__title">Adventure Tours</h3>
-              </div>
-            </Link>
-          </div>
-          <div className="col-xl-3 wow fadeInUp" data-wow-delay="250ms">
-            <Link href={`passion/${"birding-699"}`} onClick={scrollToTop}>
-              <div className="tour-type__box hoverImg">
-                <div className="tour-type__box__icon">
-                  {/* <span className="icon-hang-gliding-3" /> */}
-                  {/* <span className="icon-wildlife" /> */}
-                  <img
-                    src="assets/images/icon/4.png"
-                    alt=""
-                    className="default"
-                  />
-                  <img
-                    src="assets/images/icon/9.png"
-                    alt=""
-                    className="hover"
-                  />
-                </div>
-                <h3 className="tour-type__box__title">Sustainable</h3>
-              </div>
-            </Link>
-          </div>
-          <div className="col-xl-3 wow fadeInUp" data-wow-delay="300ms">
-            <Link href={`passion/${"wildlife-16"}`} onClick={scrollToTop}>
-              <div className="tour-type__box">
-                <div className="tour-type__box__icon">
-                  <span className="icon-wildlife" />
                 </div>
                 <h3 className="tour-type__box__title">Wildlife</h3>
               </div>
             </Link>
           </div>
+
+          <div className="col-xl-3 wow fadeInUp" data-wow-delay="150ms">
+            <Link href={`passion/${"birding-699"}`} onClick={scrollToTop}>
+              <div className="tour-type__box hoverImg">
+                <div className="tour-type__box__icon">
+                  {/* <span className="icon-paragliding-5" /> */}
+                  <Image
+                    width={65}
+                    height={65}
+                    src="/assets/img/birding.png"
+                    alt=""
+                    className="default"
+                  />
+                  <Image
+                   width={65}
+                   height={65}
+                    src="/assets/img/birding-white.png"
+                    alt=""
+                    className="hover"
+                  />
+                </div>
+                <h3 className="tour-type__box__title">Birding</h3>
+              </div>
+            </Link>
+          </div>
+
+          <div className="col-xl-3 wow fadeInUp" data-wow-delay="150ms">
+            <Link href={`passion/${"mountains-calling-707"}`} onClick={scrollToTop}>
+              <div className="tour-type__box hoverImg">
+                <div className="tour-type__box__icon">
+                  {/* <span className="icon-paragliding-5" /> */}
+                  <Image
+                    width={65}
+                    height={65}
+                    src="/assets/img/mountains-calling.png"
+                    alt=""
+                    className="default"
+                  />
+                  <Image
+                   width={65}
+                   height={65}
+                    src="/assets/img/mountain-white.png"
+                    alt=""
+                    className="hover"
+                  />
+                </div>
+                <h3 className="tour-type__box__title">Mountains Calling</h3>
+              </div>
+            </Link>
+          </div>
+
+          <div className="col-xl-3 wow fadeInUp" data-wow-delay="150ms">
+            <Link href={`passion/${"beach-chill-698"}`} onClick={scrollToTop}>
+              <div className="tour-type__box hoverImg">
+                <div className="tour-type__box__icon">
+                  {/* <span className="icon-paragliding-5" /> */}
+                  <Image
+                    width={65}
+                    height={65}
+                    src="/assets/img/beach-chill.png"
+                    alt=""
+                    className="default"
+                  />
+                  <Image
+                   width={65}
+                   height={65}
+                    src="/assets/img/beach-white.png"
+                    alt=""
+                    className="hover"
+                  />
+                </div>
+                <h3 className="tour-type__box__title">Beach Chill</h3>
+              </div>
+            </Link>
+          </div>
+
+          <div className="col-xl-3 wow fadeInUp" data-wow-delay="150ms">
+            <Link href={`passion/${"sun-sand-and-dunes-642"}`} onClick={scrollToTop}>
+              <div className="tour-type__box hoverImg">
+                <div className="tour-type__box__icon">
+                  {/* <span className="icon-paragliding-5" /> */}
+                  <Image
+                    width={65}
+                    height={65}
+                    src="/assets/img/sun-sand-dunes.png"
+                    alt=""
+                    className="default"
+                  />
+                  <Image
+                   width={65}
+                   height={65}
+                    src="/assets/img/desert-white.png"
+                    alt=""
+                    className="hover"
+                  />
+                </div>
+                <h3 className="tour-type__box__title">Sun Sand Dunes</h3>
+              </div>
+            </Link>
+          </div>
+
         </div>
       </div>
     </section>

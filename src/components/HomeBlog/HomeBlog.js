@@ -40,47 +40,25 @@ const HomeBlog = () => {
                         }}
                       />
                     </Link>
-                    <h3 className="tour-listing__card-title">
-                      <Link href={`/blog/${blog.travel_blog_url}`}>
-                        {blog.travel_blogs_title}
-                      </Link>
-                    </h3>
-                    <p
-                      className="tour-listing__card-text text-small"
-                      dangerouslySetInnerHTML={{
-                        __html: blog.travel_blog_details
-                      }}
-                    ></p>
-
-                    {/* <div className="tour-listing-two__card-show-content">
-                      <div className="tour-listing-two__card-show-title-box">
-                        <h3 className="tour-listing-two__card-show-title tour-listing__card-title">
-                          <Link href={`/blog/${blog.travel_blog_url}`}>
-                            {blog.travel_blogs_title}
-                          </Link>
-                        </h3>
-                      </div>
-                      <div className="tour-listing-two__card-show-divider" />
-                      <div className="tour-listing__card-bottom">
-                        <div className="tour-listing__card-bottom-left"></div>
-                      </div>
-                    </div>
-                    <div className="tour-listing-two__card-hover-content tour-listing__card-content">
+                    <div>
                       <h3 className="tour-listing__card-title">
                         <Link href={`/blog/${blog.travel_blog_url}`}>
                           {blog.travel_blogs_title}
                         </Link>
                       </h3>
+                    </div>
+                    <div className="dets-container">
                       <p
                         className="tour-listing__card-text text-small"
                         dangerouslySetInnerHTML={{
-                          __html: blog.travel_blog_details.substring(0, 150),
+                          __html:
+                            blog.travel_blog_details.slice(0, 150) + "...",
                         }}
                       ></p>
-
-                      <div className="tour-listing__card-divider" />
-                      <div className="tour-listing__card-bottom"></div>
-                    </div> */}
+                    </div>
+                    <a href={`/blog/${blog.travel_blog_url}`} className="rdmor trevlo-btn trevlo-btn--base fmob mt-4">
+                      <span>Read more</span>
+                    </a>
                   </div>
                 </div>
               </div>
