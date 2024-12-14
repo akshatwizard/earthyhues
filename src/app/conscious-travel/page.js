@@ -180,7 +180,7 @@ function Conscious() {
                       </h4>
                       <img
                         src="./assets/img/HT feature1.jpg"
-                        alt=""
+                        alt="Hindustan Time Featured Article"
                         className="w-100"
                       />
                       <p className="sidebar-blog__posts-title pt-3">
