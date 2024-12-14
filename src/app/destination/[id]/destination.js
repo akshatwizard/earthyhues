@@ -86,7 +86,7 @@ const Destinations = ({ dest }) => {
                       }}
                     >
                       <span className="font-bernadette-rough display-4">
-                            
+                      {data.destination?.[0]?.destination_name}
                       </span>
                     </h3>
 
