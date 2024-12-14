@@ -17453,7 +17453,7 @@ body.boxed-wrapper .main-header__booking-btn {
   border-radius: 13px;
   border: 1px solid var(--trevlo-white3, #ebe6de);
   box-shadow: 0px 16px 30px 0px rgba(0, 0, 0, 0.05);
-  padding: 53px 20px 51px;
+  padding: 53px 5px 51px;
   transition: all 500ms ease;
 }
 
@@ -18763,6 +18763,7 @@ input::placeholder {
     border-radius: 10px;
     overflow: hidden;
     padding: 5px;
+    padding-bottom: 45px;
 
     img {
       border-radius: 10px;
@@ -18775,4 +18776,20 @@ input::placeholder {
       line-height: 1.4;
     }
   }
+}
+
+.dets-container{
+  width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+
+  p{
+    margin: 0;
+  }
+}
+
+.rdmor{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
