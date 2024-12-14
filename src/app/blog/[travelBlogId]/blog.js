@@ -102,7 +102,7 @@ const TravelBlogDetail = ({ dest }) => {
                   <div className="blogImageContainer col-lg-6 mb-3 mx-2">
                     <img
                       src={data.intro_image}
-                      alt=""
+                      alt={data.heading_name}
                       style={{ width: "100%" }}
                     />
                   </div>

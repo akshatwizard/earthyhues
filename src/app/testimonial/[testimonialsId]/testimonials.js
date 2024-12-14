@@ -29,6 +29,7 @@ const TestimonialDetail = ({ dest }) => {
   // if (loading) {
   //     return <Loading />;
   // }
+// console.log(data);
 
   return (
     <div>
@@ -105,7 +106,7 @@ const TestimonialDetail = ({ dest }) => {
                         <div key={testimonial.id}>
                           <img
                             src={testimonial.testimonial_img}
-                            alt="image"
+                            alt={testimonial.testimonials_name}
                             className="w-100 mb-2"
                           />
                           <div className="result" />

@@ -63,7 +63,7 @@ const About = () => {
                 >
                   <img
                     src="assets\images\why-choose\Morning-Tea-earthy-hues-edit.jpg"
-                    alt="trevlo"
+                    alt="Travel Nature with Earthy Hues"
                   />
                 </div>
                 <div
@@ -71,7 +71,7 @@ const About = () => {
                   data-wow-delay="400ms"
                 ></div>
                 <div className="about-three__image__two">
-                  <img src="assets/images/resources/about-2.jpg" alt="trevlo" />
+                  <img src="assets/images/resources/about-2.jpg" alt="Best Nature Travel Earthy Hues" />
                 </div>
               </div>
             </div>

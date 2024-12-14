@@ -60,7 +60,7 @@ const TripData = () => {
                           width={1000}
                           height={1000}
                           src={item.image}
-                          alt=""
+                          alt={`Travel ${item.destination_name} with Earthy Hues`}
                         />
                       </div>
                       <div className="tourDataContainer">
