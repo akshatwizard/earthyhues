@@ -33,22 +33,6 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
         <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&amp;display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,700;0,800;1,800&amp;display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Manrope&amp;display=swap"
-          rel="stylesheet"
-        />
-        <link
           rel="stylesheet"
           href="../assets/vendors/bootstrap/css/bootstrap.min.css"
         />

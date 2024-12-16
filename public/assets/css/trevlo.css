@@ -43,6 +43,36 @@
 # Video
 # Tour Type
 --------------------------------------------------------------*/
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DM_Sans/static/DMSans_18pt-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url("/assets/fonts/Urbanist/static/Urbanist-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/assets/fonts/Manrope/static/Manrope-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Covered By Your Grace";
+  src: url("/assets/fonts/Covered_By_Your_Grace/Covered_By_Your_Grace-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --trevlo-size-15xl: 100px;
   --trevlo-size-14xl: 80px;
@@ -16778,7 +16808,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 
 .main-slider-three__title {
-  font-size: 55px;
+  font-size: 52px;
   line-height: 60px;
   margin-bottom: 20px;
 }
@@ -18779,17 +18809,17 @@ input::placeholder {
   }
 }
 
-.dets-container{
+.dets-container {
   width: 100%;
   max-height: 200px;
   overflow: hidden;
 
-  p{
+  p {
     margin: 0;
   }
 }
 
-.rdmor{
+.rdmor {
   position: absolute;
   bottom: 10px;
   right: 10px;
