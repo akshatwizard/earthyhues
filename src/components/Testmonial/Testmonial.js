@@ -122,11 +122,11 @@ function Testmonial() {
             // dotListClass="custom-dot-list-style"
           >
             {feedback.map((item) => (
-              <div className="col-10 text-center m-4" key={item.feedback_id}>
-                <div className="item">
+              <div className=" text-center m-4" key={item.feedback_id}>
+                <div className="item" style={{height:"400px"}}>
                   <div
                     className="testimonials-card text-center "
-                    style={{ height: "90%" }}
+                    style={{ height: "100%" }}
                   >
                     <div className="testimonials-card__image">
                       <img src={item.feedback_img} alt="img" />
