@@ -4108,7 +4108,7 @@ path {
 .banner-form__wrapper {
   position: relative;
   background-color: var(--trevlo-white, #ffffff);
-  padding: 30px 0 19px 5px;
+  padding: 20px 0 19px 5px;
   border-radius: 8px;
   box-shadow: 0px 10px 40px 0px rgb(0 0 0 / 16%);
 }
@@ -4472,10 +4472,10 @@ path {
 }
 
 .banner-form .trevlo-btn {
-  height: 100px;
+  height: 73px;
   padding: 0;
   font-size: 28px;
-  width: 94px;
+  width: 80px;
   border-radius: 0 8px 8px 0;
   margin-left: 30px;
 }
@@ -7540,7 +7540,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 
 .about-three__image__one img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
@@ -7565,8 +7565,8 @@ body.megamenu-popup-active .mobile-nav__content {
   border: 1px solid var(--trevlo-white3, #ebe6de);
   background: var(--trevlo-white, #ffffff);
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.06);
-  max-width: 335px;
-  transform: rotate(6.371deg) translateY(25px);
+  max-width: 301px;
+  transform: rotate(6.371deg) translateY(60px);
   text-align: center;
   margin-left: auto;
   padding: 12px 14px;
@@ -17331,14 +17331,14 @@ body.boxed-wrapper .main-header__booking-btn {
 --------------------------------------------------------------*/
 .video-one {
   position: relative;
-  background-color: var(--trevlo-primary, #2d2330);
+  /* background-color: var(--trevlo-primary, #2d2330); */
   /* padding: 120px 0 191px; */
-  padding: 65px 0 140px;
+  /* padding: 65px 0 140px; */
 }
 
 @media (max-width: 767px) {
   .video-one {
-    padding: 90px 0 130px;
+    /* padding: 90px 0 130px; */
   }
 }
 
@@ -17348,7 +17348,7 @@ body.boxed-wrapper .main-header__booking-btn {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: var(--trevlo-primary, #2d2330);
+  /* background-color: var(--trevlo-primary, #2d2330); */
   background-size: cover;
   background-position: center center;
   background-size: cover;
@@ -17973,7 +17973,7 @@ select.selectpicker1 {
 
 .tour-type.pad {
   padding: 50px 0 !important;
-  margin: -82px auto 20px !important;
+  margin: 0px auto 20px !important;
 }
 
 .testimonial-one.pad {
@@ -18633,6 +18633,7 @@ iframe.youtubeVideo {
   border-bottom: 1px solid whitesmoke !important;
   color: #818181 !important;
   outline: none !important;
+  width: 100%;
 }
 
 input::placeholder {

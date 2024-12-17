@@ -15,9 +15,9 @@ const About = dynamic(() => import("@/components/About/About"), {
   loading: () => <Loading />,
 });
 
-const VideoHome = dynamic(() => import("@/components/VideoHome/VideoHome"), {
-  loading: () => <Loading />,
-});
+// const VideoHome = dynamic(() => import("@/components/VideoHome/VideoHome"), {
+//   loading: () => <Loading />,
+// });
 
 const Testmonial = dynamic(() => import("@/components/Testmonial/Testmonial"), {
   loading: () => <Loading />,
@@ -45,7 +45,7 @@ export default function Home() {
       <Banner />
       <Upcomingtrip />
       <About />
-      <VideoHome />
+      {/* <VideoHome /> */}
       <TourCategories />
       <NoOfPackage />
       <Testmonial />
