@@ -131,15 +131,17 @@ const Banner = () => {
                 ))}
               </Carousel>
             ) : (
-              // Show the default image before the carousel
-              <Image
-                src="/assets/img/earthy-hues-masai-mara-kenya.webp"
-                alt="Default Banner Image"
-                width={1000}
-                height={1000}
-                priority={true}
-                style={{ width: "100%", height: "100%" }}
-              />
+              <div className="main-slider-one__image">
+                <Image
+                  src="/assets/img/earthy-hues-masai-mara-kenya.webp"
+                  alt="Default Banner Image"
+                  className="def-img"
+                  width={1000}
+                  height={1000}
+                  priority={true}
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
             )}
 
             <div className="container">
