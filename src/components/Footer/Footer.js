@@ -229,9 +229,9 @@ function Footer() {
                 <h2 className="footer-widget__title">Contact</h2>
                 {/* /.footer-widget__title */}
                 <p className="footer-widget__address">
-                  2210, 2nd Floor, 2nd Main Road, 6th Block, Jayanagar,
+                  SNN Raj Serenity, Begur Koppa Road.
                   <br />
-                  Bangalore, Karnataka - 560070
+                  Bangalore, Karnataka- 560068
                 </p>
                 <ul className="footer-widget__info">
                   <li>
