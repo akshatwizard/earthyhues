@@ -30,7 +30,7 @@ const PackageDetail = ({ dest }) => {
     fetchData();
   }, [package_id]);
 
-  // console.log(data?.gallery?.length);
+  // console.log(data.pricing);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -112,6 +112,17 @@ const PackageDetail = ({ dest }) => {
                           ></span>
                           <span class="visually-hidden">Next</span>
                         </button>
+                      </div>
+                      <div className="pkg-pricing">
+                        <p>
+                          {data?.pricing ? data.pricing : null}
+                          {data.pricing ? (
+                            <>
+                              <br />
+                              <span>(T&C applies.)</span>
+                            </>
+                          ) : null}
+                        </p>
                       </div>
                     </div>
                   ) : null}
@@ -297,8 +308,8 @@ const PackageDetail = ({ dest }) => {
                     data.gallery.map((items) => (
                       <div className="col-lg-4 col-ms-4">
                         <Image
-                        width={1000}
-                        height={500}
+                          width={1000}
+                          height={500}
                           src={items.large_image}
                           alt={items.alt}
                           className="w-100 h-100 "

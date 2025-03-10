@@ -21,7 +21,7 @@ function Packages() {
   function handleDest(event) {
     setSelectedDestination(event.target.value);
   }
-  // console.log(data[0]);
+  // console.log(data);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -159,6 +159,18 @@ function Packages() {
                               }}
                               style={{ textAlign: "justify" }}
                             ></p>
+                            <div className="pkg-pricing">
+                              <p style={{ fontSize: "15px" }}>
+                                {packageData ? packageData.pricing : null}
+
+                                {packageData.pricing ? (
+                                  <>
+                                    <br /> 
+                                    <span>(T&C applies.)</span>
+                                  </>
+                                ) : ""}
+                              </p>
+                            </div>
                             {/* <Link to={'/packagesDetail'}>Explore More</Link> */}
                             <Link
                               href={`/packages/${packageData.package_url}`}
