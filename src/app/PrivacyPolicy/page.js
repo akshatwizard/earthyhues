@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
                                 <h3 className="tour-listing-details__title tour-listing-details__overview-title">
                                 Privacy Policy
                                 </h3>
-                                <h5 className='mb-3'>This Privacy Policy was last updated on 17th May 2021.</h5>
+                                
                                 
                             </div>
                             <p className="tour-listing-details__overview-text wow animated fadeInUp"
