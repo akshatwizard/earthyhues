@@ -18832,3 +18832,20 @@ input::placeholder {
     top: 105px;
   }
 }
+
+.pkg-pricing{
+  text-align: center;
+  position: relative;
+  margin-top: 15px;
+
+  p{
+    font-size:22px;
+    color: #06a3b7;
+    line-height: 1;
+
+    span{
+      font-size: 13px;
+    }
+  }
+
+}
