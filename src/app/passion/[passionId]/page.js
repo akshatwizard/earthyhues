@@ -12,7 +12,7 @@ function page({ params }) {
 
 export async function generateMetadata({ params }) {
   const response = await axios.get(
-    `https://www.earthyhues.co.in/passions/${params.passionId}`
+    `https://www.exportleftovers.in/passions/${params.passionId}`
   );
   const data = response.data;
   // console.log(data.passion_name);
