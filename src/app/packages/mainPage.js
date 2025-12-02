@@ -26,10 +26,10 @@ function Packages() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.earthyhues.co.in/apipackages"
+          "https://www.exportleftovers.in/apipackages"
         );
         setData(response.data);
-        const menu = await axios.get("https://www.earthyhues.co.in/home-menu");
+        const menu = await axios.get("https://www.exportleftovers.in/home-menu");
         setPassionList(menu.data[0]?.passion || []);
         setDestinationList(menu.data[0]?.destination || []);
       } catch (error) {
