@@ -16,7 +16,7 @@ const TripData = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.earthyhues.co.in/api-upcoming-trip-home"
+          "https://www.exportleftovers.in/api-upcoming-trip-home"
         );
         setData(response?.data);
       } catch (error) {
