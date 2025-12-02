@@ -18,7 +18,7 @@ function Conscious() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.earthyhues.co.in/api-conscious-travel"
+          "https://www.exportleftovers.in/api-conscious-travel"
         );
         setData(response.data);
       } catch (error) {
