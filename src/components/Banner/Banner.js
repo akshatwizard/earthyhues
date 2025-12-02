@@ -43,7 +43,7 @@ const Banner = () => {
     // Set loading to true and fetch banner data
     setLoading(true);
     axios
-      .get("https://www.earthyhues.co.in/home-page-banner")
+      .get("https://www.exportleftovers.in/home-page-banner")
       .then((response) => {
         if (Array.isArray(response.data) && response.data.length >= 2) {
           setData(response.data[1]);
