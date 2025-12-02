@@ -25,7 +25,7 @@ function Blog() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://www.earthyhues.co.in/api-travel-blog"
+          "https://www.exportleftovers.in/api-travel-blog"
         );
         setData(response.data);
       } catch (error) {
