@@ -26,7 +26,7 @@ function BlogForm() {
 
     try {
       const response = await axios.post(
-        "https://www.earthyhues.co.in/api-custom-tour",
+        "https://www.exportleftovers.in/api-custom-tour",
         customerDetails
       );
 
