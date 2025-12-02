@@ -76,7 +76,7 @@ const Enquiry = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     axios
-      .post("https://www.earthyhues.co.in/enquiry-submit", formData)
+      .post("https://www.exportleftovers.in/enquiry-submit", formData)
       .then((response) => {
         toast.success("Enquiry submitted successfully!");
         // alert(JSON.stringify(response))
