@@ -13,7 +13,7 @@ function page({ params }) {
 
 export async function generateMetadata({ params }) {
   const response = await axios.get(
-    `https://www.earthyhues.co.in/api-conscious-travel/${params.id}`
+    `https://www.exportleftovers.in/api-conscious-travel/${params.id}`
   );
   const data = response.data;
   return {
