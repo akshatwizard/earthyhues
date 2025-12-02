@@ -9,7 +9,7 @@ export default function NoOfPackage() {
       async function packageCount() {
         try {
           const response = await axios.get(
-            "https://www.earthyhues.co.in/apipackages"
+            "https://www.exportleftovers.in/apipackages"
           );
           setNoOfPackage(response?.data);
         } catch (error) {
