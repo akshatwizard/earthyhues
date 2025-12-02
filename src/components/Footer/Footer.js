@@ -41,7 +41,7 @@ function Footer() {
 
   useEffect(() => {
     axios
-      .get("https://www.earthyhues.co.in/home-menu")
+      .get("https://www.exportleftovers.in/home-menu")
       .then((response) => {
         if (response.data && Array.isArray(response.data)) {
           // setData(response.data);
