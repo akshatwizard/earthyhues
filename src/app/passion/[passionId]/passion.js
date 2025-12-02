@@ -47,7 +47,7 @@ const Passion = ({ dest }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://www.earthyhues.co.in/passions/${passion_id}`
+          `https://www.exportleftovers.in/passions/${passion_id}`
         );
         // console.log(response.data);
         setData(response.data);
