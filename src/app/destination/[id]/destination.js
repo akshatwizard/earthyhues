@@ -42,7 +42,7 @@ const Destinations = ({ dest }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://www.earthyhues.co.in/destinations/${destination_id}`
+          `https://www.exportleftovers.in/destinations/${destination_id}`
         );
         // console.log(response.data);
         setData(response.data);
