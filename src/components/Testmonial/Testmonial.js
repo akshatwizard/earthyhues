@@ -13,7 +13,7 @@ function Testmonial() {
 
   useEffect(() => {
     axios
-      .get("https://www.earthyhues.co.in/home-page-feedback")
+      .get("https://www.exportleftovers.in/home-page-feedback")
       .then((response) => {
         if (Array.isArray(response.data) && response.data.length >= 1) {
           setFeedback(response.data);
