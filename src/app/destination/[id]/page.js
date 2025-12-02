@@ -11,7 +11,7 @@ function page({ params }) {
 }
 export async function generateMetadata({ params }) {
   const response = await axios.get(
-    `https://www.earthyhues.co.in/destinations/${params.id}`
+    `https://www.exportleftovers.in/destinations/${params.id}`
   );
   const data = response.data;
   const title = data.destination?.[0]?.destination_name;
