@@ -47,7 +47,7 @@ const FormHome = () => {
     event.preventDefault();
     // const response = await axios.post('/api/formdata',formData)
     const response = await axios.post(
-      "https://www.earthyhues.co.in/search-form-submit",
+      "https://www.exportleftovers.in/search-form-submit",
       formData
     );
     // console.log(response.data);
