@@ -12,7 +12,7 @@ const TravelBlogDetail = ({ dest }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://www.earthyhues.co.in/api-travel-blog/${travel_blog_id}`
+          `https://www.exportleftovers.in/api-travel-blog/${travel_blog_id}`
         );
         setData(response.data[0]);
         console.log(response.data[0]);
