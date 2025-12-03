@@ -13,7 +13,7 @@ const TestimonialDetail = ({ dest }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://www.earthyhues.co.in/api-testimonials/${testimonials_id}`
+          `https://www.exportleftovers.in/api-testimonials/${testimonials_id}`
         );
         setData(response.data[0]);
         // console.log(response.data);
