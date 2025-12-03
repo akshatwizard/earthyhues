@@ -13,7 +13,7 @@ function page({params}) {
 }
 
 export async function generateMetadata({ params }) {
-    const response = await axios.get(`https://www.earthyhues.co.in/api-testimonials/${params.testimonialsId}`);
+    const response = await axios.get(`https://www.exportleftovers.in/api-testimonials/${params.testimonialsId}`);
     const data = response.data
     return {
       title: `${data[0].testimonials_name}`,
