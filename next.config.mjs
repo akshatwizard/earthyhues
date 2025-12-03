@@ -1,8 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        domains: ['www.earthyhues.co.in'], 
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "earthyhues.co.in",
       },
+      {
+        protocol: "https",
+        hostname: "www.exportleftovers.in", 
+      },
+    ],
+  },
 };
 
 export default nextConfig;
