@@ -40,7 +40,7 @@ const FeedBack = (location) => {
 
     try {
       // const response = await axios.post('/api/fulldata', { newData, formData });
-      const response = await axios.post('https://www.earthyhues.co.in/search-form-submit', formDataToSend);
+      const response = await axios.post('https://www.exportleftovers.in/search-form-submit', formDataToSend);
 
       setNewData({
         name: "",
