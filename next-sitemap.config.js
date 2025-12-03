@@ -1,6 +1,6 @@
 async function fetchTravelBlogPaths() {
   try {
-    const res = await fetch("https://www.earthyhues.co.in/api-travel-blog");
+    const res = await fetch("https://www.exportleftovers.in/api-travel-blog");
     if (!res.ok) throw new Error("Failed to fetch travel blogs");
     const blogs = await res.json();
     const blogPaths = blogs.map((blog) => `/blog/${blog.blog_url}`);
@@ -13,7 +13,7 @@ async function fetchTravelBlogPaths() {
 
 async function consciousTravel() {
   try {
-    const res = await fetch("https://www.earthyhues.co.in/api-conscious-travel");
+    const res = await fetch("https://www.exportleftovers.in/api-conscious-travel");
     if (!res.ok) throw new Error("Failed to fetch conscious travel data");
 
     const data = await res.json();
@@ -35,7 +35,7 @@ async function consciousTravel() {
 
 async function fetchDestinationPaths() {
   try {
-    const res = await fetch("https://www.earthyhues.co.in/home-menu");
+    const res = await fetch("https://www.exportleftovers.in/home-menu");
     if (!res.ok) throw new Error("Failed to fetch destination data");
 
     const data = await res.json();
@@ -52,7 +52,7 @@ async function fetchDestinationPaths() {
 
 async function fetchPassionPaths() {
   try {
-    const res = await fetch("https://www.earthyhues.co.in/home-menu");
+    const res = await fetch("https://www.exportleftovers.in/home-menu");
     if (!res.ok) throw new Error("Failed to fetch passion data");
 
     const data = await res.json();
@@ -69,7 +69,7 @@ async function fetchPassionPaths() {
 
 async function fetchPackagesPaths() {
   try {
-    const res = await fetch("https://www.earthyhues.co.in/apipackages");
+    const res = await fetch("https://www.exportleftovers.in/apipackages");
     if (!res.ok) throw new Error("Failed to fetch packages data");
 
     const data = await res.json();
@@ -86,7 +86,7 @@ async function fetchPackagesPaths() {
 
 async function fetchTestimonialPaths() {
   try {
-    const res = await fetch("https://www.earthyhues.co.in/api-testimonials");
+    const res = await fetch("https://www.exportleftovers.in/api-testimonials");
     if (!res.ok) throw new Error("Failed to fetch testimonials data");
 
     const data = await res.json();
